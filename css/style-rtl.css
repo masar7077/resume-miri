@@ -1,0 +1,185 @@
+/* RTL by THEMI.IR */
+@font-face {
+    font-family: 'Samim';
+    src: url('../fonts/Samim.eot');
+    src: url('../fonts/Samim.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Samim.woff') format('woff'),
+		 url('../fonts/Samim.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Samim';
+    src: url('../fonts/Samim-Bold.eot');
+    src: url('../fonts/Samim-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Samim-Bold.woff') format('woff'),
+		 url('../fonts/Samim-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body, html,#main-menu.navbar-default .navbar-nav > li > a,#home h1,#about h3,h1, h2, h3, h4, h5, h6,.skills .progress-title,.section-title h2, .section-title.center h2,.section-title.center p,#services h4,#services .service p,.hover-bg .hover-text > h4,.education h2,.education h3,.caption > h3,#team-about h3,#testimonial .item h5,#blog .blog span,#blog h3,#blog h4,section#Contact .form-group input, section#Contact .form-group textarea,.contacDetails h3,button.submit,#footer p,#main-menu a.navbar-brand {
+    font-family: Samim;
+    letter-spacing: 0px;
+}
+#about .social,#services .service p,#services h4,#blog h3,#blog h4,#blog p,#blog .blog a.read-more{
+    text-align: right;
+}
+.preloader {
+    right: 0;
+    left: auto;
+}
+.owl-carousel {
+    direction: ltr;
+}
+.loader {
+    right: 50%;
+    margin: -30px -30px 0 0;
+    left: auto;
+}
+
+#about .bio {
+    margin-right: -100px;
+    padding: 14px 35px 33px 31px;
+    margin-left: auto;
+}
+
+#about hr,#blog .blog a.read-more {
+    float: right;
+}
+
+
+
+#about .social li {
+    padding-left: 14px;
+    padding-right: 0;
+}
+
+#about .skills {
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+.skills-item .counter {
+    left: 0;
+    right: auto;
+}
+
+.skills-item .count {
+    margin-left: -4px;
+    margin-right: auto;
+}
+
+#services i.icon {
+    float: right;
+}
+
+#services .service p {
+    margin-right: 90px;
+    margin-left: auto;
+}
+
+#services h4 {
+    margin: 10px 90px 6px 0;
+}
+
+ol.type li {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+ol.type li:after {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.isotope-item {
+    margin-left: -1px;
+    margin-right: auto;
+}
+
+.education .info-line span {
+    margin: 0 0 0 4px;
+}
+
+.section-title.center hr {
+    right: 17%;
+    left: auto;
+}
+
+.social .icon {
+    float: right;
+}
+
+.social .facebook {
+    right: 10%;
+    left: auto;
+}
+
+.social .twitter {
+    right: 10%;
+    left: auto;
+}
+
+.social .linkedin {
+    right: 10%;
+    left: auto;
+}
+
+#team-about hr {
+    float: right;
+}
+
+.clients-logo ul li {
+    border-left: 1px solid #e5e5e5;
+    border-right: none;
+}
+
+.clients-logo ul li:nth-child(3) {
+    border-left: medium none;
+    border-right: none;
+}
+
+.clients-logo ul li:nth-child(6) {
+    border-left: medium none;
+    border-right: none;
+}
+
+.contactRight {
+    padding-right: 28px;
+    padding-left: 0;
+}
+
+.contacDetails .icon {
+    float: right;
+}
+
+section#Contact ul {
+    padding-right: 14px;
+    padding-left: 0;
+}
+
+.go-totop {
+    right: 0;
+    left: 0;
+}
+
+ul.footer-social li {
+    margin-left: 10px;
+    margin-right: auto;
+}
+@media (max-width: 992px) {
+   .col-md-6.skills {
+    float: right;
+    width: 100%;
+}
+#about .skills {
+    margin-top: 0;
+}
+}
+@media (max-width: 768px) {
+#about .bio {
+    margin-right: 0;
+}
+#about .skills {
+    padding-right: 30px;
+}
+}
