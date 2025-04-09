@@ -1,0 +1,477 @@
+/* ========================= */
+/* تنظیمات عمومی و فونت‌ها  */
+/* ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ========================= */
+/* هدر سایت (Header)  */
+/* ========================= */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+nav ul {
+    direction: rtl;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+/* تنظیمات عمومی */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    position: relative;
+}
+
+/* دکمه‌ی همبرگری */
+.menu-toggle {
+    display: none; /* فقط در موبایل نمایش داده شود */
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* لیست منو */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* 📱 تنظیمات واکنش‌گرا برای موبایل */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* نمایش دکمه در موبایل */
+    }
+
+    .menu {
+        display: none; /* مخفی کردن منو در موبایل */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu.active {
+        display: flex; /* نمایش منو وقتی فعال شد */
+    }
+}
+/* ========================= */
+/* صفحه اصلی (Home)  */
+/* ========================= */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: url('../assets/images/home-bg.jpg') center/cover no-repeat;
+}
+
+#home h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* ========================= */
+/* بخش درباره‌ی من (About)  */
+/* ========================= */
+#about {
+    padding: 60px;
+    text-align: center;
+    background: #222;
+}
+
+#about h2 {
+    font-size: 32px;
+    color: #FFD700;
+}
+
+/* استایل متن "درباره‌ی من" */
+.about-text {
+    direction: rtl;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFD700; /* طلایی جذاب */
+    max-width: 600px; /* محدود کردن عرض متن */
+    margin: 30px auto; /* فاصله از دایو بالایی */
+    padding: 20px; /* فضای داخلی برای متن */
+    line-height: 1.8;
+    text-align: right;
+    
+    /* اضافه کردن کادر جذاب */
+    border: 3px solid #FFD700;
+    border-radius: 10px; /* گوشه‌های گرد */
+    
+    /* افکت سایه برای جذابیت بیشتر */
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+    
+    background-color: #2a2a2a; /* پس‌زمینه‌ی زیبا */
+}
+
+.details p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700; /* طلایی جذاب */
+    text-align: center;
+    margin: 10px 0;
+}
+
+.details p strong {
+    color: #fff; /* سفید برای متون اصلی */
+}
+
+.email {
+    direction: rtl;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.profile-image img {
+    width: 350px;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.4);
+}
+@media (max-width: 600px) {
+    .profile-image img {
+        max-width: 120px; /* تصویر در موبایل کوچکتر شود */
+    }
+}
+/* ========================= */
+/* خدمات (Services)  */
+/* ========================= */
+#services {
+    padding: 60px;
+    background: #292929;
+    text-align: center;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.service {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(255, 215, 0, 0.3);
+}
+
+.service img {
+    width: 150px;
+    height: auto;
+}
+
+/* تنظیمات کلی بخش بلاگ */
+#blog {
+    width: 80%; /* محدود کردن عرض برای تنظیم وسط صفحه */
+    margin: 40px auto; /* وسط‌چین شدن */
+    text-align: center;
+    background: #2a2a2a; /* پس‌زمینه‌ی تیره برای خوانایی بهتر */
+    padding: 40px;
+    border-radius: 10px; /* گوشه‌های گرد */
+    border: 3px solid #FFD700; /* کادر طلایی */
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.4); /* افکت سایه */
+}
+
+/* استایل عنوان */
+#blog h2 {
+    font-size: 28px;
+    color: #FFD700;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+/* توضیحات بلاگ */
+#blog p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* استایل لیست مقالات */
+.blog-posts {
+    display: flex;
+    flex-direction: column; /* نمایش آیتم‌ها به صورت ستونی */
+    align-items: center; /* وسط‌چین محتوا */
+    gap: 20px;
+}
+
+/* استایل مقالات */
+.post {
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    transition: 0.3s;
+}
+
+/* افکت هاور روی مقالات */
+.post:hover {
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* عنوان مقاله */
+.post h3 {
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* متن خلاصه مقاله */
+.post p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* لینک ادامه مطلب */
+.post a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFD700;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.post a:hover {
+    color: #fff;
+    text-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================= */
+/* نمونه کارها (Portfolio)  */
+/* ========================= */
+/* تنظیمات کلی بخش نمونه کارها */
+#portfolio {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 10px;
+    border: 3px solid #FFD700;
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* عنوان بخش */
+#portfolio h2 {
+    font-size: 28px;
+    color: #FFD700;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+/* تنظیمات نمایش نمونه کارها */
+.portfolio-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* آیتم‌های نمونه کار */
+.portfolio-item {
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    transition: 0.3s;
+}
+
+/* افکت هاور */
+.portfolio-item:hover {
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* عنوان پروژه */
+.portfolio-item h3 {
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* توضیحات پروژه */
+.portfolio-item p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* استایل تصویر */
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* لینک مشاهده جزئیات */
+.portfolio-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFD700;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.portfolio-item a:hover {
+    color: #fff;
+    text-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}
+/* ========================= */
+/* فرم تماس با من (Contact)  */
+/* ========================= */
+/* تنظیمات کلی فرم تماس */
+#contact {
+    width: 350px; /* محدود کردن عرض فرم */
+    margin: 40px auto; /* وسط‌چین شدن فرم */
+    text-align: right; /* راست‌چین کردن متن */
+    display: flex;
+    flex-direction: column; /* نمایش آیتم‌ها به‌صورت ستونی */
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid #FFD700; /* کادر طلایی */
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.4); /* افکت سایه */
+    background: #2a2a2a; /* پس‌زمینه‌ی تیره */
+}
+
+/* عنوان فرم */
+#contact h2 {
+    font-size: 24px;
+    color: #FFD700;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.4);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* استایل فیلدهای ورودی */
+#contact input,
+#contact textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #FFD700; /* کادر طلایی */
+    background: #333;
+    color: #fff;
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+}
+
+/* استایل دکمه */
+#contact button {
+    background: #FFD700;
+    color: #000;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* افکت هاور دکمه */
+#contact button:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+/* پیام موفقیت یا خطا */
+.success, .error {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.success {
+    color: #00FF00;
+}
+
+.error {
+    color: #FF3333;
+}
+/* ========================= */
+/* فوتر سایت (Footer)  */
+/* ========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ========================= */
+/* استایل‌های واکنش‌گرا (Responsive) */
+/* ========================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home h1 {
+        font-size: 30px;
+    }
+
+    .service-items {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
