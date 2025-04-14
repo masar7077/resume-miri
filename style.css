@@ -362,3 +362,15 @@ footer .credit {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00e3ae;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #ffd700;
+} 
