@@ -20,48 +20,32 @@ document.querySelectorAll('.portfolio-card').forEach(card => {
   });
 });
 
-// اطلاعات پست‌ها
-const posts = [
-    {
-        id: 1,
-        title: 'عنوان پست وبلاگ 1',
-        image: 'blog1.jpg',
-        content: 'محتوای کامل پست وبلاگ 1...',
-        link: 'https://example.com/post1'
-    },
-    {
-        id: 2,
-        title: 'عنوان پست وبلاگ 2',
-        image: 'blog2.jpg',
-        content: 'محتوای کامل پست وبلاگ 2...',
-        link: 'https://example.com/post2'
-    },
-    {
-        id: 3,
-        title: 'عنوان پست وبلاگ 3',
-        image: 'blog3.jpg',
-        content: 'محتوای کامل پست وبلاگ 3...',
-        link: 'https://example.com/post3'
-    }
-];
+const blogPosts = {
+  1: {
+    title: "عنوان پست وبلاگ 1",
+    image: "images/blog1.jpg",
+    text: "متن کامل پست وبلاگ شماره 1. اینجا می‌تونی هر چی خواستی بذاری."
+  },
+  2: {
+    title: "عنوان پست وبلاگ 2",
+    image: "images/blog2.jpg",
+    text: "متن کامل پست وبلاگ شماره 2. برای توضیحات بیشتر."
+  },
+  3: {
+    title: "عنوان پست وبلاگ 3",
+    image: "images/blog3.jpg",
+    text: "متن کامل پست وبلاگ شماره 3. این هم نمونه‌ی سوم."
+  }
+};
 
-// گرفتن همه کارت‌ها و اضافه کردن رویداد کلیک
-document.querySelectorAll('.blog-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const postId = card.getAttribute('data-post-id');
-        const post = posts.find(p => p.id == postId);
+function openBlogModal(id) {
+  const modal = document.getElementById("blogModal");
+  document.getElementById("modalTitle").innerText = blogPosts[id].title;
+  document.getElementById("modalImage").src = blogPosts[id].image;
+  document.getElementById("modalText").innerText = blogPosts[id].text;
+  modal.style.display = "flex";
+}
 
-        // نمایش پاپ‌آپ
-        document.getElementById('popup-title').innerText = post.title;
-        document.getElementById('popup-image').src = post.image;
-        document.getElementById('popup-content').innerText = post.content;
-        document.getElementById('popup-link').href = post.link;
-
-        document.getElementById('post-popup').style.display = 'flex';
-    });
-});
-
-// بستن پاپ‌آپ
-document.querySelector('.close-btn').addEventListener('click', () => {
-    document.getElementById('post-popup').style.display = 'none';
-});
+function closeBlogModal() {
+  document.getElementById("blogModal").style.display = "none";
+}
