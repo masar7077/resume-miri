@@ -1,0 +1,364 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+
+body {
+  font-family: 'Vazir', sans-serif;
+  background: linear-gradient(to bottom right, #3f51b5, #9c27b0);
+  color: white;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: center;
+}
+
+header {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic-container {
+  margin: 0 auto 0px;
+  width: 190px;
+  height: 190px;
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.profile-pic {
+  width: 105%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+.about2 {
+  font-size: 28px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.skill {
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(to left, #00e3ae, #007eff);
+  border-radius: inherit;
+  width: 0;
+  animation: fill-bar 2s ease forwards;
+}
+
+.skill-percent {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+@keyframes fill-bar {
+  from {
+    width: 0;
+  }
+}
+
+.about-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin: auto;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+.about-box h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.about-box p {
+  font-size: 18px;
+  line-height: 2;
+  color: #f1f1f1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.portfolio-card {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  backdrop-filter: blur(6px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.card-content .more {
+  display: none;
+  margin-top: 10px;
+  color: #ffd;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05) rotateY(1deg) rotateX(1deg);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-card:hover .more {
+  display: block;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-bar {
+    width: 90%;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* استایل اولیه دکمه همبرگر */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 220px;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+    background: linear-gradient(to bottom right, #3da3e77c, #bf87c9);
+    width: 130px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  text-align: right;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.experience-card p {
+  font-size: 16px;
+  color: #f1f1f1;
+  line-height: 1.8;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+footer .credit {
+  margin-top: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
