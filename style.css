@@ -18,14 +18,50 @@ header {
   justify-content: center;
 }
 
-.profile-pic-container {
-  margin: 0 auto 0px;
+.profile-pic-wrapper {
+  position: relative;
   width: 190px;
   height: 190px;
-  border: 5px solid white;
+  margin: 0 auto;
+}
+
+.halo {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+  animation: rotateHalo 8s linear infinite;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   overflow: hidden;
+  border: 5px solid white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes rotateHalo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .profile-pic {
@@ -41,12 +77,53 @@ p {
   margin: 10px 0;
 }
 
+.h1-wrapper {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px; /* لبه‌های گرد */
+  background-color: rgba(0, 0, 0, 0.4); /* پس‌زمینه نیمه شفاف */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* سایه ظریف برای عمق بیشتر */
+  margin-top: 30px; /* فاصله از آیتم بالاییش */
+  margin-bottom: 20px;
+  
+}
+
 h1 {
   font-size: 44px;
+  margin: 0;
+  animation: rainbow-text 8s linear infinite;
+  color: white; /* رنگ ثابت برای متن در حالت پیش‌فرض */
+}
+
+@keyframes rainbow-text {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
 }
 
 .about2 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 nav ul {
