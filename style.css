@@ -1,7 +1,8 @@
 @import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
 
 body {
-  font-family: 'Vazir', sans-serif;
+  font-family: 'Vazir', sans-serif, 'Sahel';
   background: linear-gradient(to bottom right, #3f51b5, #9c27b0);
   color: white;
   margin: 0;
@@ -78,10 +79,11 @@ p {
 }
 
 .h1-wrapper {
+  transform: translateX(-1mm);
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 12px; /* لبه‌های گرد */
-  background-color: rgba(0, 0, 0, 0.4); /* پس‌زمینه نیمه شفاف */
+  padding: 10px 15px;
+  border-radius: 20px; /* لبه‌های گرد */
+  background-color: rgba(0, 0, 0, 0.1); /* پس‌زمینه نیمه شفاف */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* سایه ظریف برای عمق بیشتر */
   margin-top: 30px; /* فاصله از آیتم بالاییش */
   margin-bottom: 20px;
@@ -90,7 +92,10 @@ p {
 
 h1 {
   font-size: 44px;
-  margin: 0;
+  font-family: Sahel;
+  margin: 5px;
+  margin-top: 2px;
+  margin-buttom: 2px;
   animation: rainbow-text 8s linear infinite;
   color: white; /* رنگ ثابت برای متن در حالت پیش‌فرض */
 }
@@ -108,12 +113,6 @@ h1 {
   42% {
     color: green;
   }
-  57% {
-    color: blue;
-  }
-  71% {
-    color: indigo;
-  }
   85% {
     color: violet;
   }
@@ -123,7 +122,9 @@ h1 {
 }
 
 .about2 {
+  transform: translateX(-1mm);
   font-size: 20px;
+  font-family: Sahel;
 }
 
 nav ul {
